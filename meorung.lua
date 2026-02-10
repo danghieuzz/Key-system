@@ -1,6 +1,6 @@
 local L = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local W = L.CreateLib("MÈO RỪNG RBL - SMART KEY", "DarkTheme")
-local S = W:NewTab("Hệ Thống Key"):NewSection("Key Script")
+local S = W:NewTab("Hệ Thống Key"):NewSection("Key ngẫu nhiên đổi mỗi ngày")
 
 S:NewTextBox("Nhập Key", "Dán key mrrbl_ vào đây", function(t)
     -- Lấy 3 số cuối của key để giải mã ngày
@@ -15,8 +15,10 @@ S:NewTextBox("Nhập Key", "Dán key mrrbl_ vào đây", function(t)
         if key_day == today or key_day == yesterday then
             L:Notify("Thành Công", "Key hợp lệ! Đang mở script...", 5)
             task.wait(2)
-            game:GetService("CoreGui")["MÈO RỪNG RBL - SMART KEY"]:Destroy()
-            -- CHẠY SCRIPT CHÍNH
+            if game:GetService("CoreGui"):FindFirstChild("MÈO RỪNG RBL - SMART KEY") then
+                game:GetService("CoreGui")["MÈO RỪNG RBL - SMART KEY"]:Destroy()
+            end
+            -- ĐÂY LÀ DÒNG QUAN TRỌNG ĐÃ ĐƯỢC SỬA:
             loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"))()
         else
             L:Notify("Lỗi", "Key đã hết hạn sử dụng!", 5)
