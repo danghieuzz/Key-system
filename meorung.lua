@@ -1,6 +1,6 @@
 local L = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local W = L.CreateLib("MÈO RỪNG RBL - SMART KEY", "DarkTheme")
-local S = W:NewTab("Hệ Thống Key"):NewSection("Key ngẫu nhiên đổi mỗi ngày")
+local S = W:NewTab("Hệ Thống Key"):NewSection("Key Script")
 
 S:NewTextBox("Nhập Key", "Dán key mrrbl_ vào đây", function(t)
     -- Lấy 3 số cuối của key để giải mã ngày
